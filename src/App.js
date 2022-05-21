@@ -1,4 +1,4 @@
-import ContactForm from './components/Form/Form';
+import ContactForm from './components/ContactForm/ContactForm';
 
 const App = () => <ContactForm />
 
