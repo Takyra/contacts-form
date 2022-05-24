@@ -17,3 +17,10 @@ code {
     width: 100%;
     height: 100%;
 }
+
+:root {
+    --white: #fff;
+    --blue: #1890ff;
+    --light-blue: #40a9ff;
+    --gray: #d9d9d9;
+}

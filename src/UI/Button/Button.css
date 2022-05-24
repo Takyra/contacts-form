@@ -1,0 +1,28 @@
+.button {
+    border: none;
+    color: var(--white);
+    background-color: var(--blue);
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    transition: background-color .2s linear;
+}
+
+.button:not(:disabled) {
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--light-blue);
+}
+
+.button:disabled {
+    background-color: var(--light-blue);
+}
+
+.button svg {
+    fill: var(--white);
+    width: 18px;
+    height: 18px;
+}

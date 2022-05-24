@@ -1,5 +1,5 @@
-import ContactForm from './components/ContactForm/ContactForm';
+import ContactForm from './components/ContactForm';
 
-const App = () => <ContactForm />
+const App = () => <ContactForm />;
 
 export default App;
