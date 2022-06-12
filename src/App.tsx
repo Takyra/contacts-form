@@ -1,5 +1,5 @@
 import ContactForm from './components/ContactForm';
 
-const App = () => <ContactForm />;
+const App = (): JSX.Element => <ContactForm />;
 
 export default App;

@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import FormItem from './FormItem';
 
-const genItemInfo = () => ({
+interface IItem {
+    id: string;
+    type: string;
+    value: string;
+};
+
+const genItemInfo = (): IItem => ({
     id: Math.random().toString(36).substring(2, 9),
     type: 'mail',
     value: ''
 });
 
-const FormItemList = () => {
-    const [itemList, setItemList] = useState([genItemInfo()]);
+const FormItemList = (): JSX.Element => {
+    const [itemList, setItemList] = useState<IItem[]>([genItemInfo()]);
 
-    const addItemHandler = index => {
+    const addItemHandler = (index: number): void => {
         const newItem = genItemInfo();
         const newItemList = [...itemList];
 
@@ -20,7 +26,7 @@ const FormItemList = () => {
         setItemList([...newItemList]);
     };
 
-    const removeItemHandler = index => {
+    const removeItemHandler = (index: number): void => {
         const newItemList = [...itemList];
 
         newItemList.splice(index, 1);

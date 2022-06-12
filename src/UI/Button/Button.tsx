@@ -1,8 +1,15 @@
-import React from 'react';
+import { FC } from 'react';
 
 import './Button.css';
 
-const Button = props => {
+interface IButtonProps {
+    children: JSX.Element | string;
+    onClick: () => void;
+    type?: "button" | "submit" | "reset" | undefined;
+    disabled?: boolean;
+};
+
+const Button: FC<IButtonProps> = (props): JSX.Element => {
     const {
         type = 'button',
         children,
